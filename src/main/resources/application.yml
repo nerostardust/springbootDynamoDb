@@ -1,0 +1,13 @@
+amazon:
+  access:
+    key: <YOUR ACCESS KEY>
+    secret-key:  <YOUR SECRET KEY>
+  region: us-east-2
+  end-point:
+#    url: https://dynamodb.us-east-2.amazonaws.com
+    url: dynamodb.us-east-2.amazonaws.com
+
+server:
+  port: 9001
+
+
