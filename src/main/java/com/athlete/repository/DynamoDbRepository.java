@@ -138,7 +138,6 @@ public class DynamoDbRepository {
         expressionAttributeValues.put(":lastNameValue",new AttributeValue().withS(lastName));
         expressionAttributeValues.put(":personalBestValue",new AttributeValue().withS(personalBest));
 
-
         ScanRequest scan = new ScanRequest().withTableName("athlete");
         ScanResult result =client.scan(scan);
 
