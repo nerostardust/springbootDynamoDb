@@ -21,11 +21,40 @@ public class DynamoDbController {
         return "Successfully inserted into DynamoDB table";
     }
 
-    @GetMapping
+    @GetMapping("/get")
     //the data we get from the postman get request is bound to the parameters found in the bracket of this method
     //using @RequestParam
     public ResponseEntity<athlete> getFromDynamoDB(@RequestParam String eventId,@RequestParam String lastName){
        athlete athlete = repository.getFromDynamoDB(eventId,lastName);
         return new ResponseEntity<athlete>(athlete, HttpStatus.OK);
     }
+
+    @GetMapping("/count")
+
+    public Integer countAthlete(@RequestParam String eventId,@RequestParam String lastName,
+                                @RequestParam String personalBest){
+        System.out.println("aaa");
+        Integer athlete = repository.countAthlete(eventId,lastName,personalBest);
+        return athlete;
+    }
+
+
+    @PutMapping
+    public void updateDynamoDB(@RequestBody athlete athlete){
+        repository.updateDynamoDB(athlete);
+
+//        if (athlete.getStatus()=="c"){
+//            repository.updateDynamoDB(athlete);
+//
+//        }
+
+
+//        return "Successfully updated DynamoDB table";
+
+
+    }
+
+
+
+
 }

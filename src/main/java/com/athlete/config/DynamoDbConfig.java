@@ -31,6 +31,11 @@ public class DynamoDbConfig {
     //AmazonDynamoDB is a service interface which helps to make requests to AWS.This service has methods for
     //each action in the service API
 
+//    @Bean
+//    public DynamoDBMapper countAthlete(){
+//        return new DynamoDBMapper(amazonDynamoDBConfig());
+//    }
+
     public AmazonDynamoDB amazonDynamoDBConfig() {
 
         //Each service interface has a corresponding client builder which we can use to implement the

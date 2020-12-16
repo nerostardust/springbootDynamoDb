@@ -8,8 +8,8 @@ public class athlete {
     private String eventId;
     private String firstName;
     private String lastName;
-    private String personalBest;
-
+    private Integer personalBest;
+    private String status;
 
 
 
@@ -42,12 +42,21 @@ public class athlete {
     }
 
     @DynamoDBAttribute
-    public String getPersonalBest() {
+    public Integer getPersonalBest() {
         return personalBest;
     }
 
-    public void setPersonalBest(String personalBest) {
+    public void setPersonalBest(Integer personalBest) {
         this.personalBest = personalBest;
+    }
+
+    @DynamoDBAttribute
+    public String getStatus(){
+        return status;
+    }
+
+    public void setStatus(String status){
+        this.status=status;
     }
 
 

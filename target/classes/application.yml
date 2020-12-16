@@ -1,7 +1,7 @@
 amazon:
   access:
-    key: AKIASSZPC5C2K2J55IE4
-    secret-key: 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
+    key: AKIASSZPC5C2IFE3U4NV
+    secret-key:  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
   region: us-east-2
   end-point:
 #    url: https://dynamodb.us-east-2.amazonaws.com
